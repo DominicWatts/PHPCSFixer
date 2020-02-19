@@ -1,0 +1,6 @@
+version: "2"
+services:
+
+  pcf:
+    image: domw/php-cs-fixer:7.1-cli
+    restart: 'always'
