@@ -24,8 +24,6 @@
     
     docker pull domw/php-cs-fixer
 
-    touch .php_cs.cache
-
     docker run --rm -v $PWD:/code:ro domw/php-cs-fixer php-cs-fixer --version
 
     docker run --rm -v $PWD:/code:ro domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 --using-cache=no ./path/to/code
