@@ -24,10 +24,12 @@
     
     docker pull domw/php-cs-fixer
 
-    docker run --rm -v $PWD:/code:ro domw/php-cs-fixer php-cs-fixer --version
+    docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer --version
 
-    docker run --rm -v $PWD:/code:ro domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 --using-cache=no ./path/to/code
+    docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 ./path/to/code
+
+    docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 --using-cache=no ./path/to/code
 
 ### Magento 2 ruleset
 
-    docker run --rm -v $PWD:/code:ro domw/php-cs-fixer php-cs-fixer fix --rules={"@PSR2":true,"array_syntax":{"syntax":"short"},"concat_space":{"spacing":"one"},include,new_with_braces,no_empty_statement,no_extra_consecutive_blank_lines,no_leading_import_slash,no_leading_namespace_whitespace,no_multiline_whitespace_around_double_arrow,no_multiline_whitespace_before_semicolons,no_singleline_whitespace_before_semicolons,no_trailing_comma_in_singleline_array,no_unused_imports,no_whitespace_in_blank_line,object_operator_without_whitespace,ordered_imports,standardize_not_equals,ternary_operator_spaces} --using-cache=no ./path/to/code
+    docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules={"@PSR2":true,"array_syntax":{"syntax":"short"},"concat_space":{"spacing":"one"},include,new_with_braces,no_empty_statement,no_extra_consecutive_blank_lines,no_leading_import_slash,no_leading_namespace_whitespace,no_multiline_whitespace_around_double_arrow,no_multiline_whitespace_before_semicolons,no_singleline_whitespace_before_semicolons,no_trailing_comma_in_singleline_array,no_unused_imports,no_whitespace_in_blank_line,object_operator_without_whitespace,ordered_imports,standardize_not_equals,ternary_operator_spaces} --using-cache=no ./path/to/code
