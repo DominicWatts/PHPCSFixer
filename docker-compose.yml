@@ -2,5 +2,5 @@ version: "2"
 services:
 
   pcf:
-    image: domw/php-cs-fixer:7.1-cli
+    image: domw/php-cs-fixer:7.4-cli
     restart: 'always'
