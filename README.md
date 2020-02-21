@@ -29,10 +29,12 @@ https://mlocati.github.io/php-cs-fixer-configurator/
     docker pull domw/php-cs-fixer
 
     docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer --version
-
+    
     docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 ./path/to/code
 
     docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 --using-cache=no ./path/to/code
+    
+    docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --verbose --using-cache=no --rules=phpdoc_no_package,ordered_imports ./path/to/code
 
     docker run --rm -v $PWD:/code domw/php-cs-fixer php-cs-fixer fix --rules=@PSR2 --verbose --using-cache=no ./path/to/code
 
